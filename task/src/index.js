@@ -7,7 +7,7 @@ import PageContent from './Components/PageContent';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App PageContent={PageContent} />
+    <App  />
     <PageContent/>
   </BrowserRouter>,
   document.getElementById("root")

@@ -19,10 +19,9 @@ function Navbar() {
         <>
         <div className='navbar'> 
         <ul className='menu'>
-          <li>< NavLink to = "/home" >  Home</NavLink></li>
-          <li><NavLink to = "/about">About</NavLink></li>  
-           <li> < NavLink to = "/contact">Content</NavLink></li>
-          
+          <li>< NavLink to ="/home">Home</NavLink></li>
+          <li><NavLink to ="/about">About</NavLink></li>  
+           <li>< NavLink to ="/contact">Content</NavLink></li> 
         </ul>
         <div>
         <Button

@@ -30,15 +30,14 @@ function Home() {
                     <Typography gutterBottom variant="h5" component="div">{post.title}</Typography>
                     <Typography variant="body2" color="text.secondary"> {post.body}</Typography>
                   </CardContent>
-                </Card>
+                  </Card>
             </li>
             )
           })
         }
-       </ul>) : (<h3>loading....</h3>)
-}
-</Box>
-      </div>
+       </ul>) : (<h3>loading....</h3>)}
+       </Box>
+       </div>
     );
   }
   export default Home;

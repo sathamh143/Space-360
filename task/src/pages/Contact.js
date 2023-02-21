@@ -27,18 +27,16 @@ function Home() {
             return(<li>
                   <Card sx={{ maxWidth: 345,sm:200 }} >
                   <CardContent  sx={{ width:{xs:245,sm :280,lg :345,}}}>
-                   
-                    <Typography variant="body2" color="text.secondary"> {post.body}</Typography>
+                  <Typography variant="body2" color="text.secondary"> {post.body}</Typography>
                   </CardContent>
-                </Card>
-            </li>
-            )
-          })
-        }
-       </ul>) : (<h3>loading....</h3>)
-}
-</Box>
-      </div>
+                  </Card>
+                  </li>
+                  )
+            })
+          }
+       </ul>) : (<h3>loading....</h3>)}
+       </Box>
+       </div>
     );
   }
   export default Home;

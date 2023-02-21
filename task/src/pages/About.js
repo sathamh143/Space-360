@@ -35,10 +35,9 @@ function Home() {
             )
           })
         }
-       </ul>) : (<h3>loading....</h3>)
-}
-</Box>
-      </div>
+       </ul>) : (<h3>loading....</h3>)}
+       </Box>
+       </div>
     );
   }
   export default Home;

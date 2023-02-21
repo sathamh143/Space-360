@@ -16,7 +16,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
 
-
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -60,9 +59,6 @@ function ResponsiveDrawer(props) {
       </List>
     </div>
   );
-
-  
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
