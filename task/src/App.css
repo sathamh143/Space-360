@@ -1,0 +1,35 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  position: fixed;
+  top: 0;
+}
+.navbar{
+  height: 64px;
+  display: flex;
+  background-color:white;
+  justify-content: space-evenly;
+  padding: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.menu{
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 500;
+  gap: 10px; 
+  list-style: none;
+}
+.space{
+  display: flex; 
+}
+.card{
+  margin-left: 250px;  
+}
+.card {
+  min-width: min-content;
+}
+
+
