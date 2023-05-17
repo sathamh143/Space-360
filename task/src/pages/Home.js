@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 function Home() {
-  const drawerWidth = 50;
+
 
    const [posts,setPosts]=useState([]);
     useEffect(() => {
@@ -15,18 +15,18 @@ function Home() {
   }); 
   },[]);
     return (
-      <div className='card'>
+      <div >
         <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
+      >
       { 
        (posts) ? 
        (<ul>
         {
           posts.map(post =>{
             return(<li>
-                  <Card sx={{ maxWidth: 345,sm:200 }} >
-                  <CardContent  sx={{ width:{xs:245,sm :280,lg :345,}}}>
+                  <Card  >
+                  <CardContent  >
                     <Typography gutterBottom variant="h5" component="div">{post.title}</Typography>
                     <Typography variant="body2" color="text.secondary"> {post.body}</Typography>
                   </CardContent>

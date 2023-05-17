@@ -1,7 +1,5 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -15,8 +13,9 @@ import Toolbar from '@mui/material/Toolbar';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
-const drawerWidth = 240;
+const drawerWidth = 320;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
@@ -33,11 +32,13 @@ function ResponsiveDrawer(props) {
         </Toolbar>
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email',].map((text, index) => (
+        {[''].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
+            
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+               <Button>< NavLink to ="/Stepper"> Stepper</NavLink></Button> 
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -46,11 +47,14 @@ function ResponsiveDrawer(props) {
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {[''].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
+            
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+               <Button>< NavLink  to ="/space360"> Space360</NavLink></Button> 
+               
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -60,36 +64,27 @@ function ResponsiveDrawer(props) {
     </div>
   );
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+    <Box sx={{ display:'flex'}}>
+     
      
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }  }}
         aria-label="mailbox folders">
         
         <Drawer
           variant="permanent"
-          sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
+         
           open
         >
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}>
-        <Toolbar />  
-      </Box>
+      
     </Box>
   );
 }
 
-ResponsiveDrawer.propTypes = {
-  
-  window: PropTypes.func,
-};
+
 
 export default ResponsiveDrawer;
