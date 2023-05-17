@@ -1,6 +1,5 @@
 import { Routes,Route } from 'react-router-dom';
 import Adduser from './Add List/Adduser';
-
 import './App.css';
 import Navbar from './Components/Navbar';
 import PageContent from './Components/PageContent';
@@ -12,7 +11,7 @@ function App() {
   return (
     <>
       
-     {/* <div className="App">
+     <div className="App">
 
        <Navbar/>
       <div className='space'>
@@ -23,17 +22,10 @@ function App() {
       <Route path="/space360" element={<Space360/> } />
       </Routes>
       </div>
-      </div> */}
+      </div>
 
     
-      <Stepper/> 
-      
-
-     {/* <Adduser/> */}
-    
-
-    {/* <TableList/>    */}
-   
+      {/* <Stepper/>  */}
     </>
   );
 }
